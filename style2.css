@@ -13,6 +13,7 @@ header {
     margin: 0;
     padding: 50px 75px 50px 75px;
     color: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -54,6 +55,11 @@ header div {
     margin: 15px 0 15px 0;
 }
 
+#station {
+    padding: 30px 0 30px 0;
+    font-weight: bold;
+}
+
 #location {
     width: 275px;
     font-size: 2em;
@@ -70,7 +76,7 @@ header div {
 }
 
 #countdown {
-    padding: 30px 0 20px 0;
+    padding: 60px 0 50px 0;
 }
 
 #cd_label {
@@ -96,4 +102,19 @@ header div {
     font-weight: bold;
     color: midnightblue;
     font-size: 4em;
+    margin-bottom: 40px;
+}
+
+#tofrom,
+#journey {
+    border-bottom: 1px solid grey;
+}
+
+#journey {
+    padding-bottom: 30px;
+}
+
+#depart_div,
+#operator {
+    padding-top: 20px;
 }

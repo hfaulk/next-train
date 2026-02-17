@@ -9,34 +9,34 @@
     <body>
         <header>
             <h1>Next Rail</h1>
-            <div class="location_class">
-                <button id="locate" onclick="setStation()">📍</button>
-            </div>
+            <button id="locate" onclick="setStation()">📍</button>
         </header>
 
         <section id="station" class="info_panel">
             <div class="info_list">
-                <select id="location">
-                    <option value="">Portsmouth Harbour</option>
-                </select>
+                <p id="stat_name">Portsmouth Harbour</p>
                 <p id="stat_code">PMH</p>
             </div>
         </section>
 
         <section id="countdown" class="info_panel">
-            <h2 id="cd_label">Departing</h2>
+            <h2 id="cd_label">Departing in</h2>
             <h1 id="cd_timer">-00:00:00</h1>
         </section>
 
         <section id="journey_info" class="info_panel">
-            <div class="info_list">
+            <div id="tofrom" class="info_list">
                 <p id="from">PMH</p>
                 <p id="arrow">→</p>
                 <p id="to">WAT</p>
             </div>
-            <div class="info_list">
+            <div id="depart_div" class="info_list">
                 <p>Departing</p>
                 <p id="depart_time" class="value">13:43</p>
+            </div>
+            <div class="info_list">
+                <p>Platform</p>
+                <p id="platform_num" class="value">5</p>
             </div>
             <div class="info_list">
                 <p>Stops</p>
@@ -46,9 +46,13 @@
                 <p>Carriages</p>
                 <p id="cars_num" class="value">8</p>
             </div>
-            <div class="info_list">
+            <div id="journey" class="info_list">
                 <p>Journey</p>
                 <p id="jt_time" class="value">1h 15m</p>
+            </div>
+            <div id="operator" class="info_list">
+                <p>Operator</p>
+                <p id="op_name" class="value">South Western Railway</p>
             </div>
         </section>
 
