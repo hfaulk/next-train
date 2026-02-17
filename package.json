@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/hfaulk/next-train/issues"
   },
-  "homepage": "https://github.com/hfaulk/next-train#readme"
+  "homepage": "https://github.com/hfaulk/next-train#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }

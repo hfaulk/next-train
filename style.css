@@ -49,6 +49,8 @@ section {
 
 #stat_name {
     text-align: left;
+    max-width: 50%;
+    width: fit-content;
 }
 
 #stat_code {

@@ -2,20 +2,20 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <script src="script.js" type="module"></script>
+
         <link rel="stylesheet" href="style.css" />
         <title>Next Rail</title>
     </head>
     <body>
-        <section id="title">
+        <header>
             <h1>Next Rail</h1>
-        </section>
+        </header>
 
         <section id="loc_sel">
             <select id="location">
                 <option value="">Portsmouth Harbour</option>
             </select>
-            <button id="locate">⛯</button>
+            <button id="locate" onclick="setStation()">⛯</button>
         </section>
 
         <section id="station" class="info_panel">
@@ -51,7 +51,8 @@
 
         <section id="countdown" class="info_panel">
             <h2 id="cd_label">Leaving In...</h2>
-            <h1 id="cd_timer">00:00:00</h1>
+            <h1 id="cd_timer">-00:00:00</h1>
         </section>
+        <script src="script.js"></script>
     </body>
 </html>

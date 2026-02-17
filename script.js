@@ -15,3 +15,16 @@
 // } else {
 //   console.error("geolocation not supported");
 // }
+
+function setStation() {
+  const stat_name = document.querySelector("#stat_name");
+  const stat_code = document.querySelector("#stat_code");
+
+  if (stat_name.textContent == "Portsmouth Harbour") {
+    stat_name.textContent = "Rhoose Cardiff International Airport";
+    stat_code.textContent = "RIA";
+  } else {
+    stat_name.textContent = "Portsmouth Harbour";
+    stat_code.textContent = "PMH";
+  }
+}
