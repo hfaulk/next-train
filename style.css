@@ -64,6 +64,13 @@ header div {
     border-radius: 0;
 }
 
+#stat_name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70%;
+}
+
 #location {
     width: 275px;
     font-size: 2em;
