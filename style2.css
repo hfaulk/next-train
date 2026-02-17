@@ -87,6 +87,9 @@ header div {
 }
 
 #to,
-#from {
+#from,
+#arrow {
     font-weight: bold;
+    color: midnightblue;
+    font-size: 4em;
 }
