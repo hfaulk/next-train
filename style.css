@@ -6,7 +6,9 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
+
 .info_panel {
     flex-direction: column;
     justify-content: center;
@@ -14,10 +16,13 @@ section {
     width: 15%;
     gap: 2px;
 }
+
 .info_list {
+    display: flex;
     justify-content: space-between;
     width: 100%;
 }
+
 .info_list p {
     margin: 0;
     padding: 0;
@@ -29,8 +34,8 @@ section {
     gap: 4px;
 }
 
-.cd_panel h2,
-.cd_panel h1 {
+.cd_panel h1,
+.cd_panel h2 {
     margin: 0;
     padding: 0;
 }
