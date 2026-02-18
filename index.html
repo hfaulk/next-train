@@ -4,12 +4,17 @@
         <meta charset="utf-8" />
 
         <link rel="stylesheet" href="style.css" />
+
         <title>Next Rail</title>
     </head>
     <body>
         <header>
             <h1>Next Rail</h1>
-            <button id="locate" aria-label="Use current location">
+            <button
+                id="locate"
+                aria-label="Use current location"
+                aria-hidden="true"
+            >
                 <svg
                     viewBox="0 0 24 24"
                     width="34"
@@ -38,7 +43,7 @@
         <section id="journey_info" class="info_panel">
             <div id="tofrom" class="info_list">
                 <p id="from">PMH</p>
-                <p id="arrow">→</p>
+                <p id="arrow">&rarr;</p>
                 <p id="to">WAT</p>
             </div>
             <div id="depart_div" class="info_list">
@@ -84,7 +89,6 @@
                 <p class="value">03:45</p>
             </div>
         </section>
-
         <script src="script.js"></script>
     </body>
 </html>

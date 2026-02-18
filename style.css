@@ -17,10 +17,10 @@ header {
 }
 
 header h1 {
-    font-size: 5em;
+    font-size: 4em;
     padding: 0;
     margin: 0;
-    font-family: "Franklin Gothic Medium";
+    font-family: sans-serif;
 }
 
 header div {
@@ -78,7 +78,6 @@ header div {
 }
 
 #locate {
-    appearance: none;
     border: none;
     background: rgba(255, 255, 255, 0.18);
     color: white;
