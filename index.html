@@ -9,7 +9,18 @@
     <body>
         <header>
             <h1>Next Rail</h1>
-            <button id="locate" onclick="setStation()">📍</button>
+            <button id="locate" aria-label="Use current location">
+                <svg
+                    viewBox="0 0 24 24"
+                    width="34"
+                    height="34"
+                    fill="currentColor"
+                >
+                    <path
+                        d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"
+                    />
+                </svg>
+            </button>
         </header>
 
         <section id="station" class="info_panel">
@@ -21,7 +32,7 @@
 
         <section id="countdown" class="info_panel">
             <h2 id="cd_label">Departing in</h2>
-            <h1 id="cd_timer">-00:00:00</h1>
+            <h1 id="cd_timer">01:23:45</h1>
         </section>
 
         <section id="journey_info" class="info_panel">
@@ -32,7 +43,7 @@
             </div>
             <div id="depart_div" class="info_list">
                 <p>Departing</p>
-                <p id="depart_time" class="value">13:43</p>
+                <p id="depart_time" class="value">12:34</p>
             </div>
             <div class="info_list">
                 <p>Platform</p>
@@ -62,15 +73,15 @@
             </div>
             <div id="next_1" class="info_list">
                 <p>Bognor Regis</p>
-                <p class="value">14:12</p>
+                <p class="value">01:23</p>
             </div>
             <div id="next_2" class="info_list">
                 <p>London Waterloo</p>
-                <p class="value">14:30</p>
+                <p class="value">02:34</p>
             </div>
             <div id="next_3" class="info_list">
                 <p>London Paddington</p>
-                <p class="value">14:43</p>
+                <p class="value">03:45</p>
             </div>
         </section>
 
