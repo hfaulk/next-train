@@ -27,12 +27,16 @@ function setStation() {
 
   const op_name = document.querySelector("#op_name");
 
+  const cd_timer = document.querySelector("#cd_timer");
+
   if (stat_name.textContent == "Portsmouth Harbour") {
     stat_name.textContent = "Rhoose Cardiff International Airport";
     stat_code.textContent = "RIA";
 
     from.textContent = "RIA";
     to.textContent = "CDF";
+
+    cd_timer.textContent = "00:03:24";
 
     op_name.textContent = "Transport for Wales";
   } else {
@@ -43,5 +47,7 @@ function setStation() {
     to.textContent = "WAT";
 
     op_name.textContent = "South Western Railway";
+
+    cd_timer.textContent = "01:23:45";
   }
 }
