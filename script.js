@@ -51,3 +51,32 @@ function setStation() {
     cd_timer.textContent = "01:23:45";
   }
 }
+
+class Countdown {
+  constructor(end_time_string, display, on_end) {
+    this.end_time = this.string_to_time(end_time_string);
+    this.display = display;
+    this.on_end = on_end;
+
+    const tr = this.time_remaining();
+
+    this.hours = Math.floor(tr / (1000 * 60 * 60));
+    this.minutes = Math.ceil(tr / 60000);
+    this.seconds = Math.floor((tr / 1000) % 60);
+  }
+
+  string_to_time(time_string) {
+    const [hours, minutes] = time_string.split(":");
+    const date = new Date(); // New date object with current date & time
+    date.setHours(parseInt(hours), parseInt(minutes), 0, 0); // Replace hours & mins with parsed info
+    return date;
+  }
+
+  time_remaining() {
+    const currentTime = new Date().getTime();
+    return this.end_time.getTime() - currentTime;
+  }
+}
+
+const cd = new Countdown("16:55", "", "");
+console.log(cd.hours, cd.minutes, cd.seconds);
