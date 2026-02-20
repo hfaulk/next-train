@@ -71,6 +71,13 @@ header div {
     max-width: 70%;
 }
 
+#op_name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 70%;
+}
+
 #location {
     width: 275px;
     font-size: 2em;
