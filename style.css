@@ -123,6 +123,10 @@ header div {
     color: grey;
 }
 
+.late {
+    color: darkred;
+}
+
 #cd_timer {
     font-size: 8em;
     padding: 0;

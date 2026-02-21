@@ -61,6 +61,8 @@ class Countdown {
     this.hours;
     this.minutes;
     this.seconds;
+
+    this.timer_elem = document.querySelector("#cd_timer");
   }
 
   string_to_time(time_string) {
@@ -83,20 +85,26 @@ class Countdown {
 
   start() {
     setInterval(() => {
-      this.calc_times(this.time_remaining());
-      this.display_time();
-      if (((this.hours == this.minutes) == this.seconds) == 0) {
-        this.on_end();
+      const time_remains = this.time_remaining();
+      this.calc_times(time_remains);
+
+      if (time_remains <= 0) {
+        this.hours = -this.hours;
+        this.minutes = -this.minutes;
+        this.seconds = -this.seconds;
+        this.timer_elem.classList.add("late");
+        //this.on_end();
       }
-    });
+
+      this.display_time();
+    }, 1000);
   }
 
   display_time() {
-    const timer = document.querySelector("#cd_timer");
-    timer.textContent = `${String(this.hours).padStart(2, "0")}:${String(this.minutes).padStart(2, "0")}:${String(this.seconds).padStart(2, "0")}`;
+    this.timer_elem.textContent = `${String(this.hours).padStart(2, "0")}:${String(this.minutes).padStart(2, "0")}:${String(this.seconds).padStart(2, "0")}`;
   }
 }
 
-const cd = new Countdown("18:55", "", "");
+const cd = new Countdown("17:34", "", "");
 console.log(cd.hours, cd.minutes, cd.seconds);
 cd.start();
