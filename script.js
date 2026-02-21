@@ -67,6 +67,10 @@ class Countdown {
     this.timer_elem = document.querySelector("#cd_timer");
   }
 
+  new_time(time_string) {
+    this.end_time = this.string_to_time(time_string);
+  }
+
   string_to_time(time_string) {
     const [hours, minutes] = time_string.split(":");
     const date = new Date(); // New date object with current date & time
@@ -117,6 +121,6 @@ class Countdown {
   }
 }
 
-const cd = new Countdown("17:45", "", "");
+const cd = new Countdown("20:45", "", "");
 console.log(cd.hours, cd.minutes, cd.seconds);
 cd.start();
