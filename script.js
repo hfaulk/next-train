@@ -62,6 +62,9 @@ class Countdown {
     this.minutes;
     this.seconds;
 
+    this.late = false;
+
+    this.timer_label = document.querySelector("#cd_label");
     this.timer_elem = document.querySelector("#cd_timer");
   }
 
@@ -78,6 +81,11 @@ class Countdown {
   }
 
   calc_times(milli) {
+    if (milli < 0) {
+      milli = -milli;
+      this.late = true;
+    }
+
     this.hours = Math.floor(milli / (1000 * 60 * 60));
     this.minutes = Math.floor((milli / 60000) % 60);
     this.seconds = Math.floor((milli / 1000) % 60);
@@ -89,10 +97,9 @@ class Countdown {
       this.calc_times(time_remains);
 
       if (time_remains <= 0) {
-        this.hours = -this.hours;
-        this.minutes = -this.minutes;
-        this.seconds = -this.seconds;
-        this.timer_elem.classList.add("late");
+        if (!this.timer_elem.classList.contains("late")) {
+          this.timer_elem.classList.add("late");
+        }
         //this.on_end();
       }
 
@@ -102,9 +109,15 @@ class Countdown {
 
   display_time() {
     this.timer_elem.textContent = `${String(this.hours).padStart(2, "0")}:${String(this.minutes).padStart(2, "0")}:${String(this.seconds).padStart(2, "0")}`;
+
+    if (this.late) {
+      this.timer_label.textContent = "Late By";
+    } else {
+      this.timer_label.textContent = "Departing In";
+    }
   }
 }
 
-const cd = new Countdown("17:34", "", "");
+const cd = new Countdown("18:45", "", "");
 console.log(cd.hours, cd.minutes, cd.seconds);
 cd.start();
