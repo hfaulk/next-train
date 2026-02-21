@@ -53,9 +53,8 @@ function setStation() {
 }
 
 class Countdown {
-  constructor(end_time_string, display, on_end) {
+  constructor(end_time_string, on_end) {
     this.end_time = this.string_to_time(end_time_string);
-    this.display = display;
     this.on_end = on_end;
 
     this.hours;
@@ -84,6 +83,8 @@ class Countdown {
     if (milli < 0) {
       milli = -milli;
       this.late = true;
+    } else {
+      this.late = false;
     }
 
     this.hours = Math.floor(milli / (1000 * 60 * 60));
@@ -95,14 +96,12 @@ class Countdown {
     setInterval(() => {
       const time_remains = this.time_remaining();
       this.calc_times(time_remains);
-
-      if (time_remains <= 0) {
-        if (!this.timer_elem.classList.contains("late")) {
-          this.timer_elem.classList.add("late");
-        }
-        //this.on_end();
+      if (this.late) {
+        this.timer_elem.classList.add("late");
+      } else {
+        this.timer_elem.classList.remove("late");
       }
-
+      //this.on_end();
       this.display_time();
     }, 1000);
   }
@@ -118,6 +117,6 @@ class Countdown {
   }
 }
 
-const cd = new Countdown("18:45", "", "");
+const cd = new Countdown("17:45", "", "");
 console.log(cd.hours, cd.minutes, cd.seconds);
 cd.start();
